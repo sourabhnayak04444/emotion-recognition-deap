@@ -51,3 +51,7 @@ spectrograms_output/
     └── Arousal/
         ├── HA (High)
         └── LA (Low)
+### 🖼 Sample Output
+Below is an example of a generated EEG spectrogram (Channel 01, Trial 01) after STFT and JET colormap application:
+
+![EEG Spectrogram Sample](./assets/sample_spectrogram.png)
