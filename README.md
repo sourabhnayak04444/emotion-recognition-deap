@@ -55,3 +55,21 @@ spectrograms_output/
 Below is an example of a generated EEG spectrogram (Channel 01, Trial 01) after STFT and JET colormap application:
 
 ![EEG Spectrogram Sample](sample.png)
+
+🧠 Model Training & Architecture
+I am implementing the following models to classify the generated spectrograms:
+
+data_loader.py: Custom PyTorch/Keras generator to load images from the spectrograms_output folder.
+
+cnn_model.py: Implementation of the Deep Learning architecture (e.g., ResNet50 or MobileNetV2) using Transfer Learning.
+
+train.py: The training script including loss functions, optimizers (Adam), and evaluation metrics (Accuracy, F1-Score).
+
+📈 Proposed Workflow
+Input: 224x224 RGB Spectrograms.
+
+Backbone: Pre-trained ImageNet weights to leverage spatial feature extraction.
+
+Classification Head: Dense layers with Dropout to prevent overfitting on the DEAP dataset.
+
+Outputs: Dual-output for Valence and Arousal (Multi-task learning).
