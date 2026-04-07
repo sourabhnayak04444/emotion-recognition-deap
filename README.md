@@ -1,6 +1,6 @@
 # emotion-recognition-deap
 Classifying emotions from the DEAP dataset by converting EEG signals to 2D spectrograms for CNN training.
-## 🚀 Getting Started
+##  Getting Started
 
 ### 1. Prerequisites
 Before running the scripts, ensure you have requested and downloaded the **DEAP Dataset** (.dat files). This project uses `kagglehub` to streamline the data access, but valid Kaggle credentials may be required.
