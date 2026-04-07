@@ -1,13 +1,1 @@
-# emotion-recognition-deap
-Classifying emotions from the DEAP dataset by converting EEG signals to 2D spectrograms for CNN training.
-##  Getting Started
-
-### 1. Prerequisites
-Before running the scripts, ensure you have requested and downloaded the **DEAP Dataset** (.dat files). This project uses `kagglehub` to streamline the data access, but valid Kaggle credentials may be required.
-
-### 2. Installation
-Clone the repository and install the necessary Python libraries:
-```bash
-git clone [https://github.com/sourabhnayak04444/emotion-recognition-deap.git](https://github.com/sourabhnayak04444/emotion-recognition-deap.git)
-cd emotion-recognition-deap
-pip install -r requirements.txt
+DEAP Dataset Spectrogram GeneratorThis script converts raw EEG data from the DEAP dataset into 224x224 RGB spectrograms, pre-labeled and organized for Deep Learning training.🛠 What This Code DoesDownloads Data: Automatically fetches the DEAP dataset using kagglehub.Processes Signals: Extracts the last 30 seconds of 32-channel EEG data.Generates Spectrograms: Uses STFT (Short-Time Fourier Transform) to create frequency-based images.Auto-Labels: Sorts images into High/Low Valence and High/Low Arousal based on a threshold of 4.5.Organizes Folders: Creates a clean directory structure compatible with most AI frameworks.📂 Folder StructureThe output is saved in ./spectrograms_output/ as follows:Subject ID (e.g., s01)Valence $\rightarrow$ HV (High) / LV (Low)Arousal $\rightarrow$ HA (High) / LA (Low)🚀 How to UseInstall Requirements:pip install numpy opencv-python scipy tqdm kagglehubRun the script: It will download the data and print a summary table of the total images generated per class.Check Output: Look for the spectrograms_output folder in your current directory.📊 Technical SpecsImage Size: 224x224 (RGB)Channels: First 32 (EEG only)STFT Window: Hann (50 samples, 50% overlap)Color Map: OpenCV JET (Thermal style)
